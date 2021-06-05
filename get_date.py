@@ -41,11 +41,7 @@ def GetDate(content):
     return_speech.append(',')
     return_speech.append(weekdays[today.weekday()])
         
-    return {
-        'speech': {
-            'text': ' '.join(return_speech)
-        }
-    }
+    return ' '.join(return_speech)
     
 def GetTime(content):
     return_speech = ['Agora são']
@@ -66,8 +62,4 @@ def GetTime(content):
     elif now.hour > 15:
         return_speech.append('da tarde')
     
-    return {
-        'speech': {
-            'text': ' '.join(return_speech)
-        }
-    }
+    return ' '.join(return_speech)
